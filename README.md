@@ -1,4 +1,4 @@
-# stellar_testing
+# MEAN_stack_CURD_example
 
 1. Open git terminal (to pull the code)
 
