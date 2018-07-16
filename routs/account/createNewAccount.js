@@ -11,7 +11,8 @@ module.exports.createUser = function (req, res) {
 	var formData = {
 		"name": req.body.name,
 		"email": req.body.email,
-		"phone": req.body.phone
+		"phone": req.body.phone,
+		"password": req.body.password		
 	}
 	console.log("formData", formData);
 
@@ -79,7 +80,8 @@ module.exports.updateUser = function (req, res) {
 		$set: {
 			"name": req.body.name,
 			"email": req.body.email,
-			"phone": req.body.phone
+			"phone": req.body.phone,
+			"password": req.body.password
 		}
 	}, {
 		w: 1

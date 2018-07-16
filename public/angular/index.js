@@ -61,7 +61,7 @@ app.filter('paging', ["SharedObject", function (SharedObject) {
 }]);
 
 app.controller('indexController', function ($scope, $http, indexFactory, SharedObject, $cookies, $cookieStore, $window, $location, Notification) {
-    $scope.pageSize = 20;
+    $scope.pageSize = 5;
     $scope.localObject = SharedObject;
 
     //get all accounts
@@ -69,6 +69,8 @@ app.controller('indexController', function ($scope, $http, indexFactory, SharedO
         indexFactory.getAllUserDetails().success(function (resultData1) {
             console.log("resultData1==", resultData1);
             $scope.users = resultData1;
+            $scope.Userslength = $scope.users.length;
+            console.log("Total users==", $scope.Userslength);
         })
     }
     $scope.getAdmin();

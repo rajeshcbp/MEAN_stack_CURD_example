@@ -13,6 +13,10 @@ var userSchema = mongoose.Schema({
 	phone: { //body
 		type: String,
 		index: true
+	},
+	password: { //body
+		type: String,
+		index: true
 	}
 });
 

@@ -132,6 +132,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
+                            <th>Password</th>
                             <th><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myCreateModal">Create New User</button></th>
                         </tr>
                     </thead>
@@ -140,6 +141,7 @@
                             <td>{{user.name}}</td>
                             <td>{{user.email}}</td>
                             <td>{{user.phone}}</td>
+                            <td>{{user.password}}</td>                            
                             <td >
                                 <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal" ng-click="getDetails(user._id)">Update</button>
                                 <button type="button" class="btn btn-danger " ng-click="delete(user._id)">Delete</button>
@@ -147,7 +149,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div ng-if="payedUserslength === pageSize" style="margin-bottom: 20px;">
+                <div ng-if="Userslength >= pageSize" style="margin-bottom: 20px;">
                     <span style="margin-left: 15px;">
                       <input type="button" value="FIRST " ng-click="NavFirst()" class="fa fa-chevron-left btn white btn-round btn-primary" title="FIRST">
 
@@ -195,9 +197,13 @@
                           
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Phone:</label>
+                            <label for="phone">Phone:</label>
                             <input type="text"  ng-model="user.phone" class="form-control" id="phone">
                             
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="text"  ng-model="user.password" class="form-control" id="password">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -230,9 +236,13 @@
                           
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Phone:</label>
+                            <label for="phone">Phone:</label>
                             <input type="text"  ng-model="user.phone" class="form-control" id="phone">
                             
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="text"  ng-model="user.password" class="form-control" id="password">
                         </div>
                     </div>
                     <div class="modal-footer">
